@@ -2,9 +2,10 @@
 
 @import 'tailwindcss';
 
+* {
+  font-family: 'Inter', sans-serif;
+}
+
 #root {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  height: 100vh;
+  min-height: 100vh;
 }
