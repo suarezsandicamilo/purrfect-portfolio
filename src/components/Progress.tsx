@@ -9,10 +9,7 @@ export const Progress = (props: Props) => {
 
   return (
     <div className="progress-root">
-      <div
-        className="progress-indicator"
-        style={{ transform: `translateX(-${x}%)` }}
-      ></div>
+      <div className="progress-indicator" style={{ translate: `-${x}%` }} />
     </div>
   );
 };
