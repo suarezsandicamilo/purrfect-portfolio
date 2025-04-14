@@ -1,9 +1,11 @@
 //
 
+import { Header } from '@/components';
+
 export const App = () => {
   return (
     <>
-      <p>Purrfect Portfolio</p>
+      <Header />
     </>
   );
 };

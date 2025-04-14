@@ -58,6 +58,7 @@ button {
   @apply py-2;
   background-color: var(--primary);
   color: var(--primary-foreground);
+  cursor: pointer;
 }
 
 button:focus-visible {
@@ -130,4 +131,43 @@ button:hover {
   @apply flex-1;
   @apply transition-all;
   background-color: var(--primary);
+}
+
+.header {
+  @apply sticky;
+  @apply top-0;
+  @apply z-10;
+  @apply border-b;
+  @apply backdrop-blur;
+  background-color: var(--background);
+  opacity: 95%;
+  border-color: var(--border);
+}
+
+.header-container {
+  @apply container;
+  @apply flex;
+  @apply h-16;
+  @apply items-center;
+  @apply justify-around;
+}
+
+.header-nav {
+  @apply flex;
+  @apply gap-6;
+}
+
+.header-link-main {
+  @apply text-xl;
+  @apply font-semibold;
+}
+
+.header-link {
+  @apply text-sm;
+  @apply font-medium;
+  @apply transition-colors;
+}
+
+.header-link:hover {
+  color: var(--primary);
 }
