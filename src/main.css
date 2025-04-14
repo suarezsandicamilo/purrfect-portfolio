@@ -5,24 +5,32 @@
 :root {
   --background: #ffffff;
   --foreground: #09090b;
+  --card: #ffffff;
+  --card-foreground: #09090b;
   --primary: #8e51ff;
   --primary-foreground: #f5f3ff;
   --secondary: #f4f4f5;
   --secondary-foreground: #18181b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717b;
+  --border: #e4e4e7;
 }
 
 .dark {
   --background: #09090b;
   --foreground: #fafafa;
+  --card: #18181b;
+  --card-foreground: #fafafa;
   --primary: #7f22fe;
   --primary-foreground: #f5f3ff;
   --secondary: #27272a;
   --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #9f9fa9;
+  --border: #ffffff1a;
 }
 
 * {
-  background-color: var(--background);
-  color: var(--foreground);
   font-family: 'Inter', sans-serif;
 }
 
@@ -30,8 +38,17 @@
   min-height: 100vh;
 }
 
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
 button {
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
   @apply gap-2;
+  @apply whitespace-nowrap;
   @apply rounded-md;
   @apply text-sm;
   @apply font-medium;
@@ -39,10 +56,6 @@ button {
   @apply h-10;
   @apply px-4;
   @apply py-2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
@@ -54,11 +67,50 @@ button:focus-visible {
 }
 
 button:disabled {
-  pointer-events: none;
-  opacity: 50%;
+  @apply pointer-events-none;
+  @apply opacity-50;
 }
 
 button:hover {
-  background-color: var(--primary-foreground);
+  background-color: var(--primary);
   opacity: 90%;
+}
+
+.card {
+  @apply rounded-lg;
+  @apply border;
+  @apply shadow-sm;
+  background-color: var(--card);
+  color: var(--card-foreground);
+}
+
+.card-header {
+  @apply flex;
+  @apply flex-col;
+  @apply space-y-1.5;
+  @apply p-6;
+}
+
+.card-title {
+  @apply text-2xl;
+  @apply font-semibold;
+  @apply leading-none;
+  @apply tracking-tight;
+}
+
+.card-description {
+  @apply text-sm;
+  color: var(--muted-foreground);
+}
+
+.card-content {
+  @apply p-6;
+  @apply pt-0;
+}
+
+.card-footer {
+  @apply flex;
+  @apply items-center;
+  @apply p-6;
+  @apply pt-0;
 }
