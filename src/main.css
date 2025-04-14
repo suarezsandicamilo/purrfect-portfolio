@@ -114,3 +114,20 @@ button:hover {
   @apply p-6;
   @apply pt-0;
 }
+
+.progress-root {
+  @apply relative;
+  @apply h-4;
+  @apply w-full;
+  @apply overflow-hidden;
+  @apply rounded-full;
+  background-color: var(--secondary);
+}
+
+.progress-indicator {
+  @apply h-full;
+  @apply w-full;
+  @apply flex-1;
+  @apply transition-all;
+  background-color: var(--primary);
+}
