@@ -1,6 +1,7 @@
 //
 
 import { Link } from 'react-router';
+import { ProjectCard } from './components';
 
 export const App = () => {
   return (
@@ -23,6 +24,11 @@ export const App = () => {
           </nav>
         </div>
       </header>
+      <ProjectCard
+        title='Porfolio Website'
+        description='A responsive portfolio website showcasing projects and skills with a clean, minimalist design.'
+        tags={['TypeScript', 'React', 'Tailwind CSS']}
+      />
     </>
   );
 };
